@@ -68,3 +68,52 @@ Route::prefix('admin')->group(function (){
      */
     Route::post('logout', 'Auth\Admin\LoginController@logout')->name('admin.auth.logout');
 });
+
+/**
+ * Route cho các nhà cung caaos sản phẩm (seller)
+ */
+Route::prefix('seller')->group(function (){
+    //Gom nhóm các route cho phần seller
+    /**
+     * URL: authen.com/seller/
+     * Route mặc định của seller
+     *
+     */
+    Route::get('/', 'SellerController@index')->name('seller.dashboard');
+    /**
+     * URL: authen.com/seller/dashboard
+     * Route đăng nhập thành công
+     *
+     */
+    Route::get('/dashboard', 'SellerController@index')->name('seller.dashboard');
+    /**
+     * URL: authen.com/seller/register
+     * Route trả về view dùng để đăng ký tài khoản seller
+     */
+    Route::get('register', 'SellerController@create')->name('seller.register');
+
+    /**
+     * URL: authen.com/seller/register
+     * Phương thức là post
+     * Route dùng để đăng ký admin từ form seller
+     */
+    Route::post('register', 'SellerController@store')->name('seller.register.store');
+
+    /**
+     * URL: authen.com/seller/login
+     * Route trả về view đănh nhập admin
+     */
+    Route::get('login', 'Auth\Seller\LoginController@login')->name('seller.auth.login');
+    /**
+     * URL: authen.com/seller/login
+     * method: post
+     * Route xử lý quá trình đăng nhập admin
+     */
+    Route::post('login', 'Auth\Seller\LoginController@loginSeller')->name('seller.auth.loginSeller');
+    /**
+     *URL: authen.com/seller/logout
+     * method: post
+     * Route dùng để đăng xuất
+     */
+    Route::post('logout', 'Auth\Seller\LoginController@logout')->name('seller.auth.logout');
+});

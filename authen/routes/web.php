@@ -86,6 +86,7 @@ Route::prefix('seller')->group(function (){
      *
      */
     Route::get('/dashboard', 'SellerController@index')->name('seller.dashboard');
+
     /**
      * URL: authen.com/seller/register
      * Route trả về view dùng để đăng ký tài khoản seller
@@ -110,10 +111,61 @@ Route::prefix('seller')->group(function (){
      * Route xử lý quá trình đăng nhập admin
      */
     Route::post('login', 'Auth\Seller\LoginController@loginSeller')->name('seller.auth.loginSeller');
+
     /**
      *URL: authen.com/seller/logout
      * method: post
      * Route dùng để đăng xuất
      */
     Route::post('logout', 'Auth\Seller\LoginController@logout')->name('seller.auth.logout');
+});
+
+/**
+ * Route cho các nhà vận chuyển (shipper)
+ */
+Route::prefix('shipper')->group(function (){
+    //Gom nhóm các route cho phần shipper
+    /**
+     * URL: authen.com/shipper/
+     * Route mặc định của shipper
+     *
+     */
+    Route::get('/', 'ShipperController@index')->name('shipper.dashboard');
+    /**
+     * URL: authen.com/shipper/dashboard
+     * Route đăng nhập thành công
+     *
+     */
+    Route::get('/dashboard', 'ShipperController@index')->name('shipper.dashboard');
+
+    /**
+     * URL: authen.com/shipper/register
+     * Route trả về view dùng để đăng ký tài khoản shipper
+     */
+    Route::get('register', 'ShipperController@create')->name('shipper.register');
+    /**
+     * URL: authen.com/shipper/register
+     * Phương thức là post
+     * Route dùng để đăng ký admin từ form shipper
+     */
+    Route::post('register', 'ShipperController@store')->name('shipper.register.store');
+
+    /**
+    * URL: authen.com/shipper/login
+    * Route trả về view đănh nhập shipper
+    */
+    Route::get('login', 'Auth\Shipper\LoginController@login')->name('shipper.auth.login');
+    /**
+     * URL: authen.com/shipper/login
+     * method: post
+     * Route xử lý quá trình đăng nhập shipper
+     */
+    Route::post('login', 'Auth\Shipper\LoginController@loginShipper')->name('shipper.auth.loginShipper');
+
+    /**
+     *URL: authen.com/shipper/logout
+     * method: post
+     * Route dùng để đăng xuất
+     */
+    Route::post('logout', 'Auth\Shipper\LoginController@logout')->name('shipper.auth.logout');
 });

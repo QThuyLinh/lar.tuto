@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('admin.layouts.glance')
 
 @section('content')
     <div class="container">

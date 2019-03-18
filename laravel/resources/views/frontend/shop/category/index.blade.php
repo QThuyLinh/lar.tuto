@@ -7,7 +7,7 @@
     <div class="women-set1">
         <div class="col-md-4 women-grids wp1 animated wow slideInUp" data-wow-delay=".5s">
             <a href="single.html"><div class="product-img">
-                    <img src="images/wp1.jpg" alt="">
+                    <img src="{{ asset('frontend_assets/images') }}/wp1.jpg" alt="">
                     <div class="p-mask">
                         <form action="#" method="post">
                             <input type="hidden" name="cmd" value="_cart">
@@ -28,7 +28,7 @@
         </div>
         <div class="col-md-4 women-grids wp2 animated wow slideInUp" data-wow-delay=".5s">
             <a href="single.html"><div class="product-img">
-                    <img src="images/wp4.jpg" alt="">
+                    <img src="{{ asset('frontend_assets/images') }}/wp4.jpg" alt="">
                     <div class="p-mask">
                         <form action="#" method="post">
                             <input type="hidden" name="cmd" value="_cart">
@@ -49,7 +49,7 @@
         </div>
         <div class="col-md-4 women-grids wp3 animated wow slideInUp" data-wow-delay=".5s">
             <a href="single.html"><div class="product-img">
-                    <img src="images/wp3.jpg" alt="">
+                    <img src="{{ asset('frontend_assets/images') }}/wp3.jpg" alt="">
                     <div class="p-mask">
                         <form action="#" method="post">
                             <input type="hidden" name="cmd" value="_cart">
@@ -73,7 +73,7 @@
     <div class="women-set2">
         <div class="col-md-4 women-grids wp4 animated wow slideInUp" data-wow-delay=".5s">
             <a href="single.html"><div class="product-img">
-                    <img src="images/wp2.jpg" alt="">
+                    <img src="{{ asset('frontend_assets/images') }}/wp2.jpg" alt="">
                     <div class="p-mask">
                         <form action="#" method="post">
                             <input type="hidden" name="cmd" value="_cart">
@@ -94,7 +94,7 @@
         </div>
         <div class="col-md-4 women-grids wp5 animated wow slideInUp" data-wow-delay=".5s">
             <a href="single.html"><div class="product-img">
-                    <img src="images/wp5.jpg" alt="">
+                    <img src="{{ asset('frontend_assets/images') }}/wp5.jpg" alt="">
                     <div class="p-mask">
                         <form action="#" method="post">
                             <input type="hidden" name="cmd" value="_cart">
@@ -115,7 +115,7 @@
         </div>
         <div class="col-md-4 women-grids wp6 animated wow slideInUp" data-wow-delay=".5s">
             <a href="single.html"><div class="product-img">
-                    <img src="images/wp6.jpg" alt="">
+                    <img src="{{ asset('frontend_assets/images') }}/wp6.jpg" alt="">
                     <div class="p-mask">
                         <form action="#" method="post">
                             <input type="hidden" name="cmd" value="_cart">
@@ -139,7 +139,7 @@
     <div class="women-set3">
         <div class="col-md-4 women-grids wp7 animated wow slideInUp" data-wow-delay=".5s">
             <a href="single.html"><div class="product-img">
-                    <img src="images/wp7.jpg" alt="">
+                    <img src="{{ asset('frontend_assets/images') }}/wp7.jpg" alt="">
                     <div class="p-mask">
                         <form action="#" method="post">
                             <input type="hidden" name="cmd" value="_cart">
@@ -160,7 +160,7 @@
         </div>
         <div class="col-md-4 women-grids wp8 animated wow slideInUp" data-wow-delay=".5s">
             <a href="single.html"><div class="product-img">
-                    <img src="images/wp8.jpg" alt="">
+                    <img src="{{ asset('frontend_assets/images') }}/wp8.jpg" alt="">
                     <div class="p-mask">
                         <form action="#" method="post">
                             <input type="hidden" name="cmd" value="_cart">
@@ -181,7 +181,7 @@
         </div>
         <div class="col-md-4 women-grids wp9 animated wow slideInUp" data-wow-delay=".5s">
             <a href="single.html"><div class="product-img">
-                    <img src="images/wp9.jpg" alt="">
+                    <img src="{{ asset('frontend_assets/images') }}/wp9.jpg" alt="">
                     <div class="p-mask">
                         <form action="#" method="post">
                             <input type="hidden" name="cmd" value="_cart">

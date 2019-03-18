@@ -1,7 +1,7 @@
 <div class="header-top-w3layouts">
     <div class="container">
         <div class="col-md-6 logo-w3">
-            <a href="index.html"><img src="images/logo2.png" alt=" " /><h1>FASHION<span>CLUB</span></h1></a>
+            <a href="index.html"><img src="{{ asset('frontend_assets/images') }}/logo2.png" alt=" " /><h1>FASHION<span>CLUB</span></h1></a>
         </div>
         <div class="col-md-6 phone-w3l">
             <ul>
@@ -52,7 +52,7 @@
                                         </ul>
                                     </div>
                                     <div class="col-sm-4 w3l">
-                                        <a href="women.html"><img src="images/menu1.jpg" class="img-responsive" alt=""></a>
+                                        <a href="women.html"><img src="{{ asset('frontend_assets/images') }}/menu1.jpg" class="img-responsive" alt=""></a>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
@@ -84,7 +84,7 @@
 
                                     </div>
                                     <div class="col-sm-4 w3l">
-                                        <a href="jewellery.html"><img src="images/menu2.jpg" class="img-responsive" alt=""></a>
+                                        <a href="jewellery.html"><img src="{{ asset('frontend_assets/images') }}/menu2.jpg" class="img-responsive" alt=""></a>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>

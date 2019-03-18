@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="container">
         <div class="col-md-3 footer-grids fgd1">
-            <a href="index.html"><img src="images/logo2.png" alt=" " /><h3>FASHION<span>CLUB</span></h3></a>
+            <a href="index.html"><img src="{{ asset('frontend_assets/images') }}/logo2.png" alt=" " /><h3>FASHION<span>CLUB</span></h3></a>
             <ul>
                 <li>1234k Avenue, 4th block,</li>
                 <li>New York City.</li>
@@ -45,7 +45,7 @@
     </div>
 </div>
 <!-- cart-js -->
-<script src="js/minicart.js"></script>
+<script src="{{ asset('frontend_assets/js/minicart.js') }}"></script>
 <script>
     w3ls1.render();
 

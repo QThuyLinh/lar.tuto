@@ -6,14 +6,14 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <!-- css -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all" />
+    <link href="{{ asset('frontend_assets/css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('frontend_assets/css/style.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('frontend_assets/css/font-awesome.min.css') }}" type="text/css" media="all" />
     <!--// css -->
     <!-- font -->
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
     <!-- //font -->
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="{{ asset('frontend_assets/js/jquery-1.11.1.min.js') }}"></script>
+    <script src="{{ asset('frontend_assets/js/bootstrap.js') }}"></script>
 </head>

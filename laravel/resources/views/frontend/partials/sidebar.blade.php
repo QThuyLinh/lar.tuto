@@ -43,7 +43,7 @@
     </div>
     <div class="w3ls_dresses_grid_left_grid">
         <div class="dresses_img_hover">
-            <img src="images/offer.jpg" alt=" " class="img-responsive">
+            <img src="{{ asset('frontend_assets/images') }}/offer.jpg" alt=" " class="img-responsive">
             <div class="dresses_img_hover_pos">
                 <h4>Upto<span>40%</span><i>Off</i></h4>
             </div>

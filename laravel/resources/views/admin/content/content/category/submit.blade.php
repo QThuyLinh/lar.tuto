@@ -17,8 +17,8 @@
                 </div>
             @endif
 
-            <form name="category" action="{{ url('admin/shop/category') }}" method="post" class="form-horizontal">
-                @csrf <!-- Sửa lỗi 419 -->
+            <form name="category" action="{{ url('admin/content/category') }}" method="post" class="form-horizontal">
+            @csrf <!-- Sửa lỗi 419 -->
                 <div class="form-group">
                     <label for="focusedinput" class="col-sm-2 control-label">Tên danh mục</label>
                     <div class="col-sm-8">
@@ -57,3 +57,4 @@
 
 
 @endsection
+

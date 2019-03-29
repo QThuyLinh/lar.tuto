@@ -95,10 +95,22 @@ Route::prefix('admin')->group(function (){
     Route::post('shop/category/{id}', 'Admin\ShopCategoryController@update');
     Route::post('shop/category/{id}/delete', 'Admin\ShopCategoryController@destroy');
 
+    /**
+     * ---------Route admin shopping product-------------
+     * --------------------------------------------
+     * --------------------------------------------
+     */
 
-    Route::get('shop/product', function (){
-        return view('admin.content.shop.product.index');
-    });
+    Route::get('shop/product', 'Admin\ShopProductController@index');
+    Route::get('shop/product/create', 'Admin\ShopProductController@create');
+    Route::get('shop/product/{id}/edit', 'Admin\ShopProductController@edit');
+    Route::get('shop/product/{id}/delete', 'Admin\ShopProductController@delete');
+
+    //Xử lý khi các form được post đi
+    Route::post('shop/product', 'Admin\ShopProductController@store');
+    Route::post('shop/product/{id}', 'Admin\ShopProductController@update');
+    Route::post('shop/product/{id}/delete', 'Admin\ShopProductController@destroy');
+
 
     Route::get('shop/order', function (){
         return view('admin.content.shop.order.index');
@@ -134,13 +146,30 @@ Route::prefix('admin')->group(function (){
      * --------------------------------------------
      * --------------------------------------------
      */
-    Route::get('content/category', function (){
-        return view('admin.content.content.category.index');
-    });
 
-    Route::get('content/post', function (){
-        return view('admin.content.content.post.index');
-    });
+    //Trả về view
+    Route::get('content/category', 'Admin\ContentCategoryController@index');
+    Route::get('content/category/create', 'Admin\ContentCategoryController@create');
+    Route::get('content/category/{id}/edit', 'Admin\ContentCategoryController@edit');
+    Route::get('content/category/{id}/delete', 'Admin\ContentCategoryController@delete');
+
+
+    //Xử lý khi các form được post đi
+    Route::post('content/category', 'Admin\ContentCategoryController@store');
+    Route::post('content/category/{id}', 'Admin\ContentCategoryController@update');
+    Route::post('content/category/{id}/delete', 'Admin\ContentCategoryController@destroy');
+
+    // Xử lý content post
+    //Trả về view
+    Route::get('content/post', 'Admin\ContentPostController@index');
+    Route::get('content/post/create', 'Admin\ContentPostController@create');
+    Route::get('content/post/{id}/edit', 'Admin\ContentPostController@edit');
+    Route::get('content/post/{id}/delete', 'Admin\ContentPostController@delete');
+
+    //Xử lý khi các form được post đi
+    Route::post('content/post', 'Admin\ContentPostController@store');
+    Route::post('content/post/{id}', 'Admin\ContentPostController@update');
+    Route::post('content/post/{id}/delete', 'Admin\ContentPostController@destroy');
 
     Route::get('content/page', function (){
         return view('admin.content.content.page.index');

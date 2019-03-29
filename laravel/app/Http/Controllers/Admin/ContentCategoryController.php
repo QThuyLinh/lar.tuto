@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Model\Admin\ContentCategoryModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Model\Admin\ShopCategoryModel;
 use Illuminate\Support\Facades\DB;
 
-class ShopCategoryController extends Controller
+class ContentCategoryController extends Controller
 {
     //
     public function index(){
 
         //phân trang - mỗi trang 10 sp
-        $items = DB::table('shop_category')->paginate(10);
+        $items = DB::table('content_category')->paginate(10);
 
         /**
          * Đây là biến truyền từ controller xuống view
@@ -21,7 +21,7 @@ class ShopCategoryController extends Controller
         $data = array();
         $data['cats'] = $items;
 
-        return view('admin.content.shop.category.index', $data);
+        return view('admin.content.content.category.index', $data);
     }
 
     /**
@@ -33,39 +33,8 @@ class ShopCategoryController extends Controller
          */
         $data = array();
 
-        return view('admin.content.shop.category.submit', $data);
+        return view('admin.content.content.category.submit', $data);
     }
-
-    /**
-     * Phương thức trả về view để sửa 1 danh mục
-     */
-    public function edit($id){
-        /**
-         * Đây là biến truyền từ controller xuống view
-         */
-        $data = array();
-
-        $item = ShopCategoryModel::find($id);
-        $data['cat'] = $item;
-
-        return view('admin.content.shop.category.edit', $data);
-    }
-
-    /**
-     * Phương thức trả về view để xóa 1 danh mục
-     */
-    public function delete($id){
-        /**
-         * Đây là biến truyền từ controller xuống view
-         */
-        $data = array();
-
-        $item = ShopCategoryModel::find($id);
-        $data['cat'] = $item;
-
-        return view('admin.content.shop.category.delete', $data);
-    }
-
 
     /**
      * Phương thức lưu trữ dữ liệu khi tạo mới 1 danh mực
@@ -82,7 +51,7 @@ class ShopCategoryController extends Controller
 
         $input = $request->all();
 
-        $item = new ShopCategoryModel();
+        $item = new ContentCategoryModel();
 
         $item->name = $input['name'];
         $item->slug = $input['slug'];
@@ -91,8 +60,23 @@ class ShopCategoryController extends Controller
         $item->desc = $input['desc'];
         $item->save();
 
-        return redirect('/admin/shop/category');
+        return redirect('/admin/content/category');
 
+    }
+
+    /**
+     * Phương thức trả về view để sửa 1 danh mục
+     */
+    public function edit($id){
+        /**
+         * Đây là biến truyền từ controller xuống view
+         */
+        $data = array();
+
+        $item = ContentCategoryModel::find($id);
+        $data['cat'] = $item;
+
+        return view('admin.content.content.category.edit', $data);
     }
 
     /**
@@ -110,7 +94,7 @@ class ShopCategoryController extends Controller
 
         $input = $request->all();
 
-        $item = ShopCategoryModel::find($id);
+        $item = ContentCategoryModel::find($id);
 
         $item->name = $input['name'];
         $item->slug = $input['slug'];
@@ -119,17 +103,34 @@ class ShopCategoryController extends Controller
         $item->desc = $input['desc'];
         $item->save();
 
-        return redirect('/admin/shop/category');
+        return redirect('/admin/content/category');
+    }
+
+    /**
+     * Phương thức trả về view để xóa 1 danh mục
+     */
+    public function delete($id){
+        /**
+         * Đây là biến truyền từ controller xuống view
+         */
+        $data = array();
+
+        $item = ContentCategoryModel::find($id);
+        $data['cat'] = $item;
+
+        return view('admin.content.content.category.delete', $data);
     }
 
     /**
      * Phương thức xóa 1 danh mục
      */
     public function destroy($id){
-        $item = ShopCategoryModel::find($id);
+        $item = ContentCategoryModel::find($id);
 
         $item->delete();
 
-        return redirect('/admin/shop/category');
+        return redirect('/admin/content/category');
     }
+
+
 }
